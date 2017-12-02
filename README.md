@@ -69,7 +69,6 @@ Introduction reading and video:
 1. [Deploy an Azure Container Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) - _Will not currently work for connected cloud subscriptions._
 2. Login to Azure
 3. Download CLI and Login with CLI
-4. View [Kubernetes Dashboard](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard)
 
 ### Kubernetes Connect
 
@@ -100,6 +99,7 @@ Introduction reading and video:
 
 1. [Kubernetes 101 Tutorial](https://github.com/gravitational/workshop/blob/master/k8s101.md)
 2. Clone workshop Repo
+
 	```sh
 	git clone https://github.com/gravitational/workshop.git
 	```
@@ -116,6 +116,7 @@ Introduction reading and video:
 
 1. [Kubernetes 101 Tutorial](https://github.com/gravitational/workshop/blob/master/k8s101.md)
 2. Clone workshop Repo
+
 	```sh
 	git clone https://github.com/gravitational/workshop.git
 	```
@@ -129,12 +130,95 @@ Introduction reading and video:
 
 1. [Kubernetes 101 Tutorial](https://github.com/gravitational/workshop/blob/master/k8s101.md)
 2. Clone workshop Repo
+
 	```sh
 	git clone https://github.com/gravitational/workshop.git
 	```
 3. Sections: Connecting Services
 
-Requires a private registry locally or use of cloud registry, such as [Docker Hub](https://hub.docker.com/)
+**Note:** Requires a private registry locally or use of cloud registry, such as [Docker Hub](https://hub.docker.com/).
+
+### Azure Kubernetes 201
+
+1. Tutorials #3-5, Run and scale application exercises.
+2. Tutorials 6 and 7 require [docker-compose](https://docs.docker.com/compose/install/).
+
+* 3: [Deploy an Azure Container Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster)
+* 4: [Run applications in Azure Container Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application)
+* 5: [Scale application in Azure Container Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-scale)
+	* **Caution:** Scaling _nodes_ could come with some risk in the Class Azure subscription. Such as losing connection to your K8s master in your cluster. This happened to one engineer in DLJ#1 class. Cause unknown.
+* 6: [Update an application in Azure Container Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-app-update)
+* 7: [Monitor Azure Container Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-monitor)
+
+### Kubernetes Dashboard
+
+* [Tutorial: Azure AKS Kubernetes Dashboard](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard)
+
+1. Tunnel to a local version of the kubernetes dashboard
+2. Expose and edit two services within the kubernetes dashboard
+
+### Wordpress on Kubernetes
+
+* [Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+
+1. Create persistent volume
+2. Create secret for MySQL password
+3. Launch Wordpress
+
+### Elastic Search on K8s
+
+1. Clonse the examples repo
+2. Deploy elasticsearch
+3. Verify functionality
+
+1. Clone [Kubernetes Examples repo](https://github.com/kubernetes/examples)
+
+	```sh
+	git clone git@github.com:kubernetes/examples.git
+	```
+2. Follow [Elastic Search Tutorial](https://github.com/kubernetes/examples/tree/master/staging/elasticsearch)
+
+	Bonus:
+3. [Deploy production ready cluster](https://github.com/pires/kubernetes-elasticsearch-cluster)
+	```sh
+	git clone git@github.com:pires/kubernetes-elasticsearch-cluster.git
+	```
+4. Bonus #2: Expose Kibana
+
+### Kubernetes Stateful Application
+
+1. Stand up and watch stateful mysql instances
+	* [Run a Replicated Stateful Application](https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/)
+2. Query and verify connectivity
+
+### Kubernetes Configmap
+
+1. Create Configmap
+2. Consume Configmap in environment variables
+3. Set command line using Configmap
+4. Consume Configmap in Volume
+
+* [ConfigMap Tutorial](http://pwittrock.github.io/docs/user-guide/configmap/)
+* Use wget to get the files for the exercise...
+
+	```sh
+	wget http://pwittrock.github.io/docs/user-guide/configmap/configmap.yaml
+	wget http://pwittrock.github.io/docs/user-guide/configmap/env-pod.yaml
+	wget http://pwittrock.github.io/docs/user-guide/configmap/command-pod.yaml
+	wget http://pwittrock.github.io/docs/user-guide/configmap/volume-pod.yaml
+	wget http://pwittrock.github.io/docs/user-guide/configmap/mount-file-pod.yaml
+	```
+* Then apply using: (for example...)
+	```sh
+	kubectl create -f configmap.yaml
+	```
+
+### Kubernetes & Prometheus (Metrics)
+
+* Follow [Tutorial: Collecting Metrics with Prometheus](https://github.com/kelseyhightower/oscon-2017-kubernetes-tutorial/blob/master/labs/06-tutorial-metrics.md)
+
+1. Stand up [Prometheus](https://prometheus.io/docs/introduction/overview/)
+2. Gather and monitor metrics
 
 
 Additional Resources
@@ -146,13 +230,7 @@ Additional Resources
 * [kubectl Reference Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [Kubernetes Community Resources](http://k8s.info/index.html)
 * [Kubernetes Community Resources - Cheat Sheet](http://k8s.info/cs.html)
-* [Configure containers using a ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configmap/)
-* [ConfigMap Example](http://pwittrock.github.io/docs/user-guide/configmap/)
 
-### Walkthroughs and Tutorials
-
-* [Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
-* [Collecting Metrics with Prometheus](https://github.com/kelseyhightower/oscon-2017-kubernetes-tutorial/blob/master/labs/06-tutorial-metrics.md)
 
 ### Kubernetes in Azure
 

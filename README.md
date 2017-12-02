@@ -80,9 +80,62 @@ Introduction reading and video:
 
 1. [Tutorial: Prepare application for Azure Container Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app)
 2. [Tutorial: Deploy and use Azure Container Registry](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr)
-	* **Note:** If creating a registry in Azure is not possible, consider using your own public registry/repos in [Docker Cloud](https://cloud.docker.com).
+	* **Note:** If creating a registry in Azure is not possible, consider using your own public registry/repos in [Docker Hub](https://hub.docker.com/).
 3. Create container images and run voting app locally. -- requires docker compose.
 4. Upload voting app images to container registry created in step 2.
+
+### Go, gRPC and Kubernetes (Optional)
+* [Getting Started with Microservices using Go, gRPC and Kubernetes](https://outcrawl.com/getting-started-microservices-go-grpc-kubernetes/)
+* [Source code for Getting Started with Microservices using Go, gRPC and Kubernetes](https://github.com/tinrab/kubernetes-go-grpc-tutorial)
+
+1. Define Simple Services
+	1. Comm protocol
+	2. Common Divisor Services
+	3. Frontend API Service
+2. Build Docker Images
+3. Deploy to K8s Cluster
+
+
+### Kubernetes 101 (1st section)
+
+1. [Kubernetes 101 Tutorial](https://github.com/gravitational/workshop/blob/master/k8s101.md)
+2. Clone workshop Repo
+	```sh
+	git clone https://github.com/gravitational/workshop.git
+	```
+3. Classroom work: Running Nginx
+	1. Standup Nginx
+	2. Curl service from Tutum container
+	3. Explore within the container
+4. Follow sections:
+	1. Running nginx
+	2. Pod IPs
+	3. Pod Containers
+
+### Kubernetes 101 (2nd section)
+
+1. [Kubernetes 101 Tutorial](https://github.com/gravitational/workshop/blob/master/k8s101.md)
+2. Clone workshop Repo
+	```sh
+	git clone https://github.com/gravitational/workshop.git
+	```
+3. Classroom work sections:
+	1. Deployments and Replicasets
+	2. Services
+	3. Back to Deployments
+	4. Configuration management basics
+
+### Kubernetes 101 (3rd section - Optional/extra credit)
+
+1. [Kubernetes 101 Tutorial](https://github.com/gravitational/workshop/blob/master/k8s101.md)
+2. Clone workshop Repo
+	```sh
+	git clone https://github.com/gravitational/workshop.git
+	```
+3. Sections: Connecting Services
+
+Requires a private registry locally or use of cloud registry, such as [Docker Hub](https://hub.docker.com/)
+
 
 Additional Resources
 ------------------
@@ -98,7 +151,6 @@ Additional Resources
 
 ### Walkthroughs and Tutorials
 
-* [Kubernetes 101 Workshop](https://github.com/gravitational/workshop/blob/master/k8s101.md) - Introduction to Kubernetes and basic concepts
 * [Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 * [Collecting Metrics with Prometheus](https://github.com/kelseyhightower/oscon-2017-kubernetes-tutorial/blob/master/labs/06-tutorial-metrics.md)
 
@@ -107,5 +159,4 @@ Additional Resources
 * [Running Kubernetes in Azure](https://kubernetes.io/docs/getting-started-guides/azure/) - Basic information on options available.
 * [Deploy a Kubernetes Cluster using ACS-Engine](https://github.com/Azure/acs-engine/blob/master/docs/kubernetes/deploy.md) - Getting started information.
 * [Azure ACS-Engine Examples and Walkthroughs](https://github.com/Azure/acs-engine/tree/master/examples)
-
 

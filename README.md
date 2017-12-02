@@ -5,6 +5,36 @@ Links and resources used by the Introduction to Kubernetes DevOps Learning Journ
 
 @Todo: Windows users: Please fill in the Windows installation prerequisites.
 
+Table of Contents
+-----------------
+<!-- To generate Table of contents, do:
+	npm update
+	./node_modules/markdown-toc/cli.js --no-firsth1 README.md
+-->
+- [Notes](#notes)
+- [Mac: Install Prerequisites](#mac-install-prerequisites)
+- [Windows: Install Prerequisites](#windows-install-prerequisites)
+- [Classroom](#classroom)
+  * [What is Kubernetes](#what-is-kubernetes)
+  * [Get Started: Local Kubernetes](#get-started-local-kubernetes)
+  * [Azure Kubernetes Connect](#azure-kubernetes-connect)
+  * [Kubernetes Connect](#kubernetes-connect)
+  * [(Azure) Kubernetes Connect 101](#azure-kubernetes-connect-101)
+  * [Go, gRPC and Kubernetes (Optional)](#go-grpc-and-kubernetes-optional)
+  * [Kubernetes 101 (1st section)](#kubernetes-101-1st-section)
+  * [Kubernetes 101 (2nd section)](#kubernetes-101-2nd-section)
+  * [Kubernetes 101 (3rd section - Optional/extra credit)](#kubernetes-101-3rd-section---optionalextra-credit)
+  * [Azure Kubernetes 201](#azure-kubernetes-201)
+  * [Kubernetes Dashboard](#kubernetes-dashboard)
+  * [Wordpress on Kubernetes](#wordpress-on-kubernetes)
+  * [Elastic Search on K8s](#elastic-search-on-k8s)
+  * [Kubernetes Stateful Application](#kubernetes-stateful-application)
+  * [Kubernetes Configmap](#kubernetes-configmap)
+  * [Kubernetes & Prometheus (Metrics)](#kubernetes--prometheus-metrics)
+- [Additional Resources](#additional-resources)
+  * [Reference Docs](#reference-docs)
+  * [Kubernetes in Azure](#kubernetes-in-azure)
+  
 Notes
 ------------------
 If you have VPN connected, you may encounter problems with your local docker connecting to a remote registry. Disconnect from VPN and then restart your terminal before continuing.

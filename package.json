@@ -1,0 +1,7 @@
+{
+  "name": "kubernetes-introduction",
+  "version": "1.0.0",
+  "dependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}

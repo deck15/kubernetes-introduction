@@ -31,10 +31,17 @@ Table of Contents
   * [Kubernetes Stateful Application](#kubernetes-stateful-application)
   * [Kubernetes Configmap](#kubernetes-configmap)
   * [Kubernetes & Prometheus (Metrics)](#kubernetes--prometheus-metrics)
+  * [SPIFFE Secure Certificate Example (Optional)](#spiffe-secure-certificate-example-optional)
+  * [Kubernetes Secrets](#kubernetes-secrets)
+  * [K8s Networking Explained (Optional)](#k8s-networking-explained-optional)
+  * [Minikube CICD on Jenkins](#minikube-cicd-on-jenkins)
+  * [Artifactory on Kubernetes](#artifactory-on-kubernetes)
+  * [Deploy Cassandra with Stateful Sets](#deploy-cassandra-with-stateful-sets)
+  * [Helm (Package manager) on Kubernetes](#helm-package-manager-on-kubernetes)
 - [Additional Resources](#additional-resources)
   * [Reference Docs](#reference-docs)
   * [Kubernetes in Azure](#kubernetes-in-azure)
-  
+
 Notes
 ------------------
 If you have VPN connected, you may encounter problems with your local docker connecting to a remote registry. Disconnect from VPN and then restart your terminal before continuing.
@@ -52,11 +59,12 @@ Mac: Install Prerequisites
 	```
     
 3. Install Tools and Utilities:
-	* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), [minikube](https://github.com/kubernetes/minikube), [Docker](https://docs.docker.com/docker-for-mac/install/), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Docker Compose](https://docs.docker.com/compose/), [Docker Machine](https://docs.docker.com/machine/install-machine/), [Docker Machine driver xhyve](https://github.com/zchee/docker-machine-driver-xhyve), [Azure-CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest), and [NodeJS](https://nodejs.org/en/download/).
+	* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), [minikube](https://github.com/kubernetes/minikube), [Docker](https://docs.docker.com/docker-for-mac/install/), [Vagrant](https://www.vagrantup.com/downloads.html), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Docker Compose](https://docs.docker.com/compose/), [Docker Machine](https://docs.docker.com/machine/install-machine/), [Docker Machine driver xhyve](https://github.com/zchee/docker-machine-driver-xhyve), [Azure-CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest), and [NodeJS](https://nodejs.org/en/download/).
 
 	```sh
 	brew cask install docker
 	brew cask install minikube
+	brew cask install vagrant
 	brew cask install virtualbox
 	brew install kubernetes-cli
 	brew install docker-compose
@@ -250,12 +258,64 @@ Introduction reading and video:
 1. Stand up [Prometheus](https://prometheus.io/docs/introduction/overview/)
 2. Gather and monitor metrics
 
+### SPIFFE Secure Certificate Example (Optional)
+
+1. Install Virtual Box & Vagrant
+2. Standup K8s vagrant machines
+3. Run demo
+
+* [Kubernetes Workload Attestation Demo](https://github.com/spiffe/spiffe-example/tree/master/beatrice)
+
+### Kubernetes Secrets
+
+1. Create Secret config file and pods
+2. Install and Launch Vault
+3. (Optional) Challenge: Replicate Vault Secrets into Kubernetes
+
+* [Tutorial: Secrets](https://github.com/kelseyhightower/oscon-2017-kubernetes-tutorial/blob/master/labs/04-tutorial-secrets.md)
+* [Challenge Tutorial: Replicate Vault Secrets into Kubernetes](https://github.com/kelseyhightower/oscon-2017-kubernetes-tutorial/blob/master/labs/05-challege-secrets.md)
+
+### K8s Networking Explained (Optional)
+
+1. Docker Networking Example
+2. CNI Basics
+	1. Requires access to Kubernetes host if not using minikube
+
+* [Kubernetes Networking Explained](https://github.com/gravitational/workshop/blob/master/k8snet.md)
+
+### Minikube CICD on Jenkins
+
+1. [Install Prerequisites (Node, etc)](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/5/set-cicd-pipeline-kubernetes-part-1-overview)
+2. [Setup Jenkins](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/6/set-cicd-pipeline-jenkins-pod-kubernetes-part-2)
+3. [(Optional) Puzzle App Part 1](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/run-and-scale-distributed-crossword-puzzle-app-cicd-kubernetes-part-3)
+4. [(Optional) Puzzle App Part 2](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/set-cicd-distributed-crossword-puzzle-app-kubernetes-part-4)
+
+### Artifactory on Kubernetes
+
+* [Artifactory in Kubernetes Example](https://github.com/JFrogDev/artifactory-docker-examples/tree/master/kubernetes)
+
+### Deploy Cassandra with Stateful Sets
+
+1. Create Cassandra Headless Service
+2. Create a Cassandra Ring
+3. Validate the Stateful Set
+4. Modify the Stateful Set
+
+* [Tutorial: Deploying Cassandra with Stateful Sets](https://kubernetes.io/docs/tutorials/stateful-application/cassandra/)
+
+### Helm (Package manager) on Kubernetes
+
+1. Verify Helm is working
+2. Install nginx-ingress
+
+* [Use Helm with Azure Container Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm)
 
 Additional Resources
 ------------------
 
 ### Reference Docs
 
+* [Curated list for awesome kubernetes sources](https://github.com/ramitsurana/awesome-kubernetes)
 * [Kubernetes by Example](http://kubernetesbyexample.com/) - A hands-on introduction to Kubernetes
 * [kubectl Reference Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [Kubernetes Community Resources](http://k8s.info/index.html)

@@ -7,10 +7,13 @@ Links and resources used by the Introduction to Kubernetes DevOps Learning Journ
 
 Table of Contents
 -----------------
-<!-- To generate Table of contents, do:
+To generate Table of contents, do:
+
+```sh
 	npm update
 	./node_modules/markdown-toc/cli.js --no-firsth1 README.md
--->
+```
+
 - [Notes](#notes)
 - [Mac: Install Prerequisites](#mac-install-prerequisites)
 - [Windows: Install Prerequisites](#windows-install-prerequisites)
@@ -53,11 +56,11 @@ Mac: Install Prerequisites
 ------------------
 1. Install Xcode from the [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12), or from [Apple Developer Downloads](https://developer.apple.com/xcode/downloads/)
 2. [Install Homebrew](https://brew.sh/) using the following command:
-    
+
 	```sh
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	```
-    
+
 3. Install Tools and Utilities:
 	* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), [minikube](https://github.com/kubernetes/minikube), [Docker](https://docs.docker.com/docker-for-mac/install/), [Vagrant](https://www.vagrantup.com/downloads.html), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Docker Compose](https://docs.docker.com/compose/), [Docker Machine](https://docs.docker.com/machine/install-machine/), [Docker Machine driver xhyve](https://github.com/zchee/docker-machine-driver-xhyve), [Azure-CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest), and [NodeJS](https://nodejs.org/en/download/).
 
@@ -320,7 +323,7 @@ Additional Resources
 * [kubectl Reference Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [Kubernetes Community Resources](http://k8s.info/index.html)
 * [Kubernetes Community Resources - Cheat Sheet](http://k8s.info/cs.html)
-
+* [Configure Access to Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
 
 ### Kubernetes in Azure
 
